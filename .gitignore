@@ -1,0 +1,11 @@
+#backups
+backups/
+
+#elpa
+elpa/
+
+#loose files
+.recentf
+.smex-items
+ido.last
+projectile-bookmarks.eld
