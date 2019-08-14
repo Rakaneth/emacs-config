@@ -4,6 +4,12 @@ backups/
 #elpa
 elpa/
 
+#sly
+server/
+
+#autosave
+auto-save-list/
+
 #loose files
 .recentf
 .smex-items

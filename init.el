@@ -22,7 +22,7 @@
     ido-completing-read+
     
     ;;Common Lisp REPL
-    slime
+    sly
 
     ;;Enhances M-x to allow easier execution of commands
     smex
@@ -42,17 +42,6 @@
 
 ;;SLIME config
 (setq inferior-lisp-program "sbcl")
-(setq slime-auto-connect 'ask)
-(defun my-slime-setup ()
-  (require 'slime)
-  (slime-setup))
-(defvar my--slime-setup-done nil)
-(defun my-slime-setup-once ()
-  (unless my--slime-setup-done
-    (my-slime-setup)
-    (setq my--slime-setup-done t)))
-(defadvice lisp-mode (before my-slime-setup-once activate)
-  (my-slime-setup-once))
 
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'load-path "~/.emacs.d/customizations")
@@ -62,6 +51,8 @@
 (load "editing.el")
 (load "misc.el")
 (load "elisp-editing.el")
+
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 	     
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -70,7 +61,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ido-completing-read+ smex slime rainbow-delimiters projectile paredit magit))))
+    (ido-completing-read+ smex rainbow-delimiters projectile paredit magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
