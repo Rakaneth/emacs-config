@@ -5,6 +5,8 @@
 	     '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa-stable" . "jttps://stable.melpa.org/packages/") t)
 
 ;;load and activate emacs packages
 (package-initialize)
@@ -23,6 +25,9 @@
     
     ;;Common Lisp REPL
     sly
+
+    ;;clojure REPL
+    cider
 
     ;;Enhances M-x to allow easier execution of commands
     smex
@@ -61,7 +66,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ido-completing-read+ smex rainbow-delimiters projectile paredit magit))))
+    (cider ido-completing-read+ smex rainbow-delimiters projectile paredit magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
