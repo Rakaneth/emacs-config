@@ -10,6 +10,9 @@ server/
 #autosave
 auto-save-list/
 
+#transient
+transient/
+
 #loose files
 .recentf
 .smex-items
