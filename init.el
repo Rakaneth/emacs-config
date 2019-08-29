@@ -39,7 +39,10 @@
     rainbow-delimiters
 
     ;;git integration
-    magit))
+    magit
+
+    ;;markdown
+    markdown-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -66,7 +69,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (cider ido-completing-read+ smex rainbow-delimiters projectile paredit magit))))
+    (markdown-mode cider ido-completing-read+ smex rainbow-delimiters projectile paredit magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
