@@ -61,6 +61,12 @@
 (load "elisp-editing.el")
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;;; Windows findstr for grepping
+(when (eq system-type 'windows-nt)
+  (with-eval-after-load 'grep
+    (grep-apply-setting 'grep-find-template
+                        "findstr /S /N /D. /C:<R> <F>")))
 	     
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
