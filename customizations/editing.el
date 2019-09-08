@@ -67,3 +67,4 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+(set-face-foreground 'linum "white")
