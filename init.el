@@ -59,6 +59,7 @@
 (load "editing.el")
 (load "misc.el")
 (load "elisp-editing.el")
+(load "setup-clojure.el")
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 

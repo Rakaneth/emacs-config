@@ -10,7 +10,7 @@
 (add-hook 'clojure-mode-hook 'subword-mode)
 
 ;; A little more syntax highlighting
-(require 'clojure-mode-extra-font-locking)
+;;(require 'clojure-mode-extra-font-locking)
 
 ;; syntax hilighting for midje
 (add-hook 'clojure-mode-hook
@@ -46,8 +46,9 @@
 ;; Wrap when navigating history.
 (setq cider-repl-wrap-history t)
 
-;; enable paredit in your REPL
+;; enable paredit in your REPL and in Clojure
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
+(add-hook 'clojure-mode-hook 'paredit-mode)
 
 ;; Use clojure mode for other extensions
 (add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
